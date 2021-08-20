@@ -47,11 +47,11 @@ class Table
      */
     public function remember($key,Closure $callback){
 
-        $value = $this->getDataToRam($key);
+        $value = $this->table->key($key);
         if ($value){
             return $value;
         }
-        $this->setDataToRam($key, $value = $callback());
+        $this->table->set($key, $value = $callback());
         return $value;
     }
 

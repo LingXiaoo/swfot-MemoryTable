@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Lingxiao\Swoft\RabbitMq\test\testing;
+namespace Lingxiao\Swoft\MemoryTable\test\testing;
 
 use Swoft\SwoftComponent;
 
@@ -41,10 +41,21 @@ class AutoLoader extends SwoftComponent
     public function beans(): array
     {
         return [
-            "rabbitmq" =>[
-                "class" => \Lingxiao\Swoft\RabbitMq\RabbitMq::class,
-                "brokers" => "127.0.0.1"
-            ],
+            'MemoryTable' =>
+                [
+                    'class'         => \Lingxiao\Swoft\MemoryTable\MemoryTable::class,
+                    'tableConf' => [
+                        [
+                            'name' => 'test',
+                            'class' => \Lingxiao\Swoft\MemoryTable\Table::class,
+                            'tableSize' => 1024,
+                            'column' => [
+                                ['name' => 'id', 'type'=> \Swoole\Table::TYPE_STRING,'size' =>8],
+                                ['name' => 'value', 'type'=> \Swoole\Table::TYPE_STRING,'size' =>20],
+                            ]
+                        ],
+                    ]
+                ]
         ];
     }
 }

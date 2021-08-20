@@ -8,12 +8,10 @@
  * @license  https://github.com/swoft-cloud/swoft/blob/master/LICENSE
  */
 
-namespace Lingxiao\Swoft\RabbitMq\RabbitMq;
-
-use Swoft\Log\Handler\FileHandler;
+namespace Lingxiao\Swoft\MemoryTable\test;
 
 return [
-    'MemoryTable'               =>
+    'MemoryTable' =>
     [
         'class'         => \Lingxiao\Swoft\MemoryTable\MemoryTable::class,
         'tableConf' => [

@@ -2,8 +2,14 @@
 namespace Lingxiao\Swoft\MemoryTable;
 
 use Lingxiao\Swoft\MemoryTable\Exception\MemoryTableException;
+use Swoft\Bean\Annotation\Mapping\Bean;
 use \Swoole\Table as SwooleTable;
 
+/**
+ * Class MemoryTable
+ * @package Lingxiao\Swoft\MemoryTable
+ * @Bean()
+ */
 class MemoryTable
 {
     protected $tableConf;

@@ -23,8 +23,8 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Lingxiao\\Swoft\\RabbitMq\\Test\\Unit\\": "test/unit/",
-      "Lingxiao\\Swoft\\RabbitMq\\Test\\Testing\\": "test/testing/",
+      "Lingxiao\\Swoft\\MemoryTable\\Test\\Unit\\": "test/unit/",
+      "Lingxiao\\Swoft\\MemoryTable\\Test\\Testing\\": "test/testing/",
       "SwoftTest\\Unit\\": "vendor/swoft/framework/test/unit/",
       "SwoftTest\\Testing\\": "vendor/swoft/framework/test/testing/"
     }
